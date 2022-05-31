@@ -99,37 +99,3 @@ if (counting == 1) {
 
 
 
-$(function () {
-	animate();
-	var top = parseInt($('#thierrySolitaire').css('top'));
-	var left = parseInt($('#thierrySolitaire').css('left'));
-	var tween = new TWEEN.Tween({x: 0, y: 0})
-			.to({x: 200, y: 200}, 500)
-			//.easing(TWEEN.Easing.Elastic.InOut)
-			.onUpdate(function () {
-				var thierrySolitaire = document.getElementById('thierrySolitaire');
-				thierrySolitaire.style.transform = 'translateX(' + this.x + 'px) translateY(' + this.y + 'px)';
-				thierrySolitaire.style.transform = 'translate(' + this.x + 'px, ' + this.y + 'px)';
-
-				var clone = $('#thierrySolitaire').clone().css({
-					transform: '',
-					position: 'absolute',
-					top: (top + this.y) + 'px',
-					left: (left + this.x) + 'px'
-				}).attr('id', 'thierrySolitaire-' + this.y + '-' + this.x);
-				$('#wrap').append(clone);
-			})
-			.start();
-
-	function animate(time) {
-		requestAnimationFrame(animate);
-		TWEEN.update();
-	}
-
-	setInterval(function () {
-		TWEEN.update();
-	}, 1);
-});
-
-
-
