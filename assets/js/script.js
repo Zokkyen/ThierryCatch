@@ -67,22 +67,22 @@ btn.addEventListener('click', () => {
 
     switch (hasard) {
         case 1:
-            thierry.src = '/assets/img/thierryT.png';
+            thierry.src = "assets/img/thierryT.png";
             gameBox.appendChild(thierry);
             animeThierry(thierry, "top");
             break;
         case 2:
-            thierry.src = '/assets/img/thierryB.png';
+            thierry.src = "assets/img/thierryB.png";
             gameBox.appendChild(thierry);
             animeThierry(thierry, "bottom");
             break;
         case 3:
-            thierry.src = '/assets/img/thierryR.png';
+            thierry.src = "assets/img/thierryR.png";
             gameBox.appendChild(thierry);
             animeThierry(thierry, "right");
             break;
         case 4:
-            thierry.src = '/assets/img/thierryL.png';
+            thierry.src = "assets/img/thierryL.png";
             gameBox.appendChild(thierry);
             animeThierry(thierry, "left");
             break;
